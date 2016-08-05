@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/pag1'
+
+  get 'pages/pag2'
+
+  get 'pages/pag3'
+
   resources :movies
 
   devise_for :users

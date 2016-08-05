@@ -34,6 +34,7 @@ class MoviesController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @movie.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -70,6 +71,6 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:title, :genre)
+      params.require(:movie).permit(:title, :genre, :photo, :photo_cache)
     end
 end
